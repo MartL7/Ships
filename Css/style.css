@@ -1,0 +1,162 @@
+body {
+    background-color: #faf0ca;
+}
+
+.Con {
+    display: grid;
+    place-items: center;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.Contenedor {
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 30%;
+    height: 300px;
+    text-align: center;
+    background: linear-gradient(to right, #FF69B4, #BA55D3);
+}
+
+select {
+    padding: 10px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+select:hover {
+    border-color: #888;
+}
+
+select:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+option {
+    background-color: #FF69B4;
+    color: #fff;
+}
+
+.Contenedor-Boton {
+    margin-top: 5%;
+    margin-left: 10px;
+}
+.Boton{
+    font-weight: 700;
+    color: #1b3039;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.Boton:hover{
+    background-color: #e2f1f8;
+    color: pink;
+    transform: scale(1.1);
+
+}
+
+.Con-img {
+    display: none;
+    justify-content: center;
+}
+
+.Contenedor-imagenes {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.Contenedor-imagenes img:nth-child(2) {
+    margin-left: -30px;
+    z-index: 2;
+}
+
+.Contenedor-imagenes img:nth-child(3) {
+    margin-left: -20px;
+} 
+
+.Contenedor-imagenes img {
+    width: 200px;
+    border-radius: 100%;
+}
+
+.Texto {
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.Texto p {
+    background: linear-gradient(90deg, #FF69B4, #800080);
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.5rem;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.Contenedor-Alerta {
+    border-radius: 20px;
+}
+
+.Redes-Sociales {
+    left: 0;
+}
+
+.Redes {
+    list-style: none;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.Redes li {
+    margin: 10px;
+}
+
+.Redes a i{
+    font-size: 2rem;
+    transition: color .4s ease;
+}
+
+.Redes a:hover i{
+    color: aqua;
+}
+
+@media screen and (max-width: 500px) {
+   .Contenedor {
+        width: 100%;
+   }
+   
+   .Redes-Sociales {
+        display: grid;
+        place-items: center;
+        margin-right: -4%;
+    }
+
+    .Redes {
+        position: fixed;
+        top: auto;
+        transform: none;
+        bottom: 0;
+        flex-direction: row;
+        list-style: none;
+        display: flex;
+    }
+
+   .Contenedor-imagenes {
+        margin-top: 5%;
+   }
+
+   .Contenedor-imagenes img {
+        width: 100px;
+   }
+}
