@@ -17,12 +17,11 @@ fetch('personas.json')
     });
 
 function Ship() {
-    const select = document.getElementById('Persona1').value;
-    const select2 = document.getElementById('Persona2').value;
+    const select = document.getElementById('Persona1').value.toLowerCase();
+    const select2 = document.getElementById('Persona2').value.toLowerCase();
     const p = document.getElementById('TextoShip');
     const Corazon = document.getElementById('Corazonimg');
     const DivImg = document.querySelector('.Con-img');
-
     if(select === select2) {
         Swal.fire({
             title: "Error",
@@ -47,7 +46,11 @@ function Ship() {
             (Nada[select] === "Nombre1" && Nada[select2] === "Nombre2") ||
             (Nada[select] === "Nombre3" && Nada[select2] === "Nombre4") ||
             (Nada[select] === "Nombre2" && Nada[select2] === "Nombre1") ||
-            (Nada[select] === "Nombre4" && Nada[select2] === "Nombre3")
+            (Nada[select] === "Nombre4" && Nada[select2] === "Nombre3") ||
+            (Nada[select] === "Nombre5" && Nada[select2] === "Nombre2") ||
+            (Nada[select] === "Nombre2" && Nada[select2] === "Nombre5") ||
+            (Nada[select] === "Nombre6" && Nada[select2] === "Nombre3") ||
+            (Nada[select] === "Nombre3" && Nada[select2] === "Nombre6")
         ) {
             Porcentaje = PorcentajeRandom(1);
             if(Porcentaje > 50) {
@@ -66,11 +69,25 @@ function Ship() {
     } 
 }
 
+function Version() {
+    const Contenedor_Select = document.querySelector('.Contenedor');
+    const Contenedor_Input = document.querySelector('.Contenedor2');
+    const DivImg = document.querySelector('.Con-img');
+    const p = document.getElementById('TextoShip');
+
+    Contenedor_Select.remove();
+    Contenedor_Input.style.display = "block";
+    DivImg.style.display = "none";
+    p.innerHTML = "";
+}
+
 const Nada = {
-    GEOVANY: "Nombre1",
-    LESLIE: "Nombre2",
-    "JUAN MARTIN": "Nombre3",
-    KAREN: "Nombre4"
+    geovany: "Nombre1",
+    leslie: "Nombre2",
+    "martin": "Nombre3",
+    karen: "Nombre4",
+    geovas: "Nombre5",
+    andres: "Nombre6"
 };
 
 function PorcentajeRandom(numero) {

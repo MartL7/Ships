@@ -8,13 +8,17 @@ body {
     font-family: "Courier New", Courier, monospace;
 }
 
-.Contenedor {
+.Contenedor, .Contenedor2 {
     border: 2px solid black;
     border-radius: 15px;
     width: 30%;
     height: 300px;
     text-align: center;
     background: linear-gradient(to right, #FF69B4, #BA55D3);
+}
+
+.Contenedor2 {
+    display: none;
 }
 
 select {
@@ -38,10 +42,27 @@ option {
     color: #fff;
 }
 
+input {
+    padding: 10px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+input:hover {
+    border-color: #888;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
 .Contenedor-Boton {
     margin-top: 5%;
     margin-left: 10px;
 }
+
 .Boton{
     font-weight: 700;
     color: #1b3039;
@@ -120,6 +141,7 @@ option {
 
 .Redes li {
     margin: 10px;
+    color: #BA55D3;
 }
 
 .Redes a i{
