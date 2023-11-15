@@ -154,7 +154,7 @@ input:focus {
 }
 
 @media screen and (max-width: 500px) {
-   .Contenedor {
+   .Contenedor, .Contenedor2 {
         width: 100%;
    }
    
