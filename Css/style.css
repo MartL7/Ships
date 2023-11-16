@@ -141,16 +141,24 @@ input:focus {
 
 .Redes li {
     margin: 10px;
-    color: #BA55D3;
 }
 
 .Redes a i{
     font-size: 2rem;
     transition: color .4s ease;
+    color: #BA55D3;
 }
 
 .Redes a:hover i{
     color: aqua;
+}
+
+.InputImagen {
+  display: none;
+}
+
+#BFotoP1, #BFotoP2 {
+    margin-right: 2%;
 }
 
 @media screen and (max-width: 500px) {
@@ -158,6 +166,10 @@ input:focus {
         width: 100%;
    }
    
+   #BFotoP1, #BFotoP2 {
+        margin-right: auto;
+   }
+
    .Redes-Sociales {
         display: grid;
         place-items: center;
@@ -172,6 +184,7 @@ input:focus {
         flex-direction: row;
         list-style: none;
         display: flex;
+        text-align: center;
     }
 
    .Contenedor-imagenes {
@@ -181,4 +194,8 @@ input:focus {
    .Contenedor-imagenes img {
         width: 100px;
    }
+
+   .Redes a i{
+        font-size: 1.8rem;
+    }
 }
