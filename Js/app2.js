@@ -1,3 +1,14 @@
+// Código By Geovar or MartL7
+
+let Titulo = document.title;
+window.addEventListener('blur', () => {
+  Titulo = document.title;
+  document.title = "No quieres Shipear a tus compas?";
+})
+window.addEventListener('focus', () => {
+  document.title = Titulo;
+})
+
 document.addEventListener("DOMContentLoaded", function () {
   const InputImagenP1 = document.getElementById("ImagenInput");
   const FotoP1 = document.getElementById("ImagenP1");

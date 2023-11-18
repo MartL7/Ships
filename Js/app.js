@@ -54,14 +54,41 @@ function Ship() {
             (Nada[select] === "Nombre3" && Nada[select2] === "Nombre6")
         ) {
             Porcentaje = PorcentajeRandom(1);
-            Corazon.src = (Porcentaje > 50 && Porcentaje < 100) ? "https://i.gifer.com/Vh2.gif" : (Porcentaje === 100) ? "https://usagif.com/wp-content/uploads/gif/heart-eyes-16.gif" : Corazon.src;
-            
-            p.innerHTML = "El ship de " + select + " Con " + select2 + " Es de <br> <br>" 
-            + Porcentaje + "%";
+            Corazon.src =
+              Porcentaje > 50 && Porcentaje < 100
+                ? "https://i.gifer.com/Vh2.gif"
+                : Porcentaje === 100
+                ? "https://usagif.com/wp-content/uploads/gif/heart-eyes-16.gif"
+                : Corazon.src;
+
+            p.innerHTML = "El ship de " + select + " Con " + select2 +
+              " Es de <br> <br>" + Porcentaje + "%";
+              
+        } else if(select === "ulises" && select2 != "" || select2 === "ulises" && select != "") {
+           Swal.fire({
+             title: "Error",
+             text: "No puedes Shipear a Ulises",
+             icon: "warning",
+             confirmButtonText: "Regresar",
+             footer: "Esta apartado para la profe de Historia",
+             allowOutsideClick: false,
+             customClass: {
+               popup: "Contenedor-Alerta",
+             },
+           });
+           p.innerHTML = "";
+           DivImg.style.display = "none";
         } else {
-            Corazon.src = (Porcentaje > 50) ? "https://i.gifer.com/Vh2.gif" : (Porcentaje <= 50) ? "https://media.tenor.com/DnNxobCSQZkAAAAC/coraz%C3%B3n-roto.gif" : Corazon.src;
-            
-            p.innerHTML = "El ship de " + select + " Con " + select2 + " Es de <br> <br>" + Porcentaje + "%";
+             Corazon.src =
+               Porcentaje > 50
+                 ? "https://i.gifer.com/Vh2.gif"
+                 : Porcentaje <= 50
+                 ? "https://media.tenor.com/DnNxobCSQZkAAAAC/coraz%C3%B3n-roto.gif"
+                 : Corazon.src;
+
+             p.innerHTML =
+               "El ship de " + select + " Con " + select2 +
+               " Es de <br> <br>" + Porcentaje + "%";
         }
     } 
 }
